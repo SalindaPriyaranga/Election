@@ -1,265 +1,270 @@
-<%@page contentType="text/html" pageEncoding="UTF-8" %>
-
-
-<!DOCTYPE html>
-
 
 <html>
+
 <head>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    >
-    <script src="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"></script>
-    <link href="/src/main/webapp/css/sidebar.css" type="text/css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/jsp-js@0.4.1/index.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-            crossorigin="anonymous"></script>
-    <script src="/src/main/webapp/js/script.js"
-            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-            crossorigin="anonymous"></script>
-    <style>
-        a {
-            text-decoration: none !important;
-        }
-    </style>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script>
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $(".side-nav .collapse").on("hide.bs.collapse", function () {
+                $(this).prev().find(".fa").eq(1).removeClass("fa-angle-right").addClass("fa-angle-down");
+            });
+            $('.side-nav .collapse').on("show.bs.collapse", function () {
+                $(this).prev().find(".fa").eq(1).removeClass("fa-angle-down").addClass("fa-angle-right");
+            });
+        })
+
+    </script>
 
 </head>
+
 <body>
-<!--Main Navigation-->
-<header>
-    <!-- Sidebar -->
-    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-        <div class="position-sticky">
-            <div class="list-group list-group-flush mx-3 mt-4">
-                <a
-                        href="#"
-                        class="list-group-item list-group-item-action py-2 ripple"
-                        aria-current="true"
-                >
-                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Main dashboard</span>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
-                    <i class="fas fa-chart-area fa-fw me-3"></i><span>Webiste traffic</span>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-lock fa-fw me-3"></i><span>Password</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-chart-line fa-fw me-3"></i><span>Analytics</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
-                    <i class="fas fa-chart-pie fa-fw me-3"></i><span>SEO</span>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-chart-bar fa-fw me-3"></i><span>Orders</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-globe fa-fw me-3"></i><span>International</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-building fa-fw me-3"></i><span>Partners</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-calendar fa-fw me-3"></i><span>Calendar</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-users fa-fw me-3"></i><span>Users</span></a
-                >
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"
-                ><i class="fas fa-money-bill fa-fw me-3"></i><span>Sales</span></a
-                >
-            </div>
-        </div>
-    </nav>
-    <!-- Sidebar -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-    <!-- Navbar -->
-    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Toggle button -->
-            <button data-mdb-button-init
-                    class="navbar-toggler"
-                    type="button"
-                    data-mdb-collapse-init
-                    data-mdb-target="#sidebarMenu"
-                    aria-controls="sidebarMenu"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-            >
-                <i class="fas fa-bars"></i>
+<!--<div class="container">
+	<div class="row">
+		<h2>Create your snippet's HTML, CSS and Javascript in the editor tabs</h2>
+	</div>
+</div>-->
+<div id="throbber" style="display:none; min-height:120px;"></div>
+<div id="noty-holder"></div>
+<div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-
-            <!-- Brand -->
-            <a class="navbar-brand" href="#">
-                <img
-                        src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                        height="25"
-                        alt="MDB Logo"
-                        loading="lazy"
-                />
+            <a class="navbar-brand" href="#"><img src="src/main/webapp/img/ballot.jpg" >
             </a>
-            <!-- Search form -->
-            <form class="d-none d-md-flex input-group w-auto my-auto">
-                <input
-                        autocomplete="off"
-                        type="search"
-                        class="form-control rounded"
-                        placeholder='Search (ctrl + "/" to focus)'
-                        style="min-width: 225px;"
-                />
-                <span class="input-group-text border-0"><i class="fas fa-search"></i></span>
-            </form>
+        </div>
+        <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li><a href="#" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Stats"><i
+                    class="fa fa-bar-chart-o"></i>
+            </a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b
+                        class="fa fa-angle-down"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-fw fa-power-off"></i> Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li><a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i>
+                    Production<i class="fa fa-fw fa-angle-left pull-right"></i></a>
 
-            <!-- Right links -->
-            <ul class="navbar-nav ms-auto d-flex flex-row">
-                <!-- Notification dropdown -->
-                <li class="nav-item dropdown">
-                    <a data-mdb-dropdown-init class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-                       href="#"
-<%--                       id="navbarDropdownMenuLink"--%>
-                       role="button"
-                       data-mdb-toggle="dropdown"
-                       aria-expanded="false"
-                    >
-                        <i class="fas fa-bell"></i>
-                        <span class="badge rounded-pill badge-notification bg-danger">1</span>
-                    </a>
-                    <ul
-                            class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="navbarDropdownMenuLink"
-                    >
-                        <li>
-                            <a class="dropdown-item" href="#">Some news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Another news</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </li>
+                    <ul id="submenu-1" class="collapse">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
                     </ul>
                 </li>
-
-                <!-- Icon -->
-                <li class="nav-item">
-                    <a class="nav-link me-3 me-lg-0" href="#">
-                        <i class="fas fa-fill-drip"></i>
-                    </a>
-                </li>
-                <!-- Icon -->
-                <li class="nav-item me-3 me-lg-0">
-                    <a class="nav-link" href="#">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-
-                <!-- Icon dropdown -->
-                <li class="nav-item dropdown">
-                    <a
-                            data-mdb-dropdown-init class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow"
-                            href="#"
-                            id="navbarDropdown"
-                            role="button"
-                            data-mdb-toggle="dropdown"
-                            aria-expanded="false"
-                    >
-                        <i class="flag-united-kingdom flag m-0"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="#"
-                            ><i class="flag-united-kingdom flag"></i>English
-                                <i class="fa fa-check text-success ms-2"></i
-                                ></a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider"/>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-china flag"></i>中文</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>日本語</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Deutsch</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Français</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Español</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Русский</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#"><i class="flag-portugal flag"></i>Português</a>
-                        </li>
+                <li>
+                    <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-star"></i> Clients
+                        <i class="fa fa-fw fa-angle-left pull-right"></i></a>
+                    <ul id="submenu-2" class="collapse">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
                     </ul>
                 </li>
-
-                <!-- Avatar -->
-                <li class="nav-item dropdown">
-                    <a
-                            data-mdb-dropdown-init
-                            class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center"
-                            href="#"
-                            id="navbarDropdownMenuLink"
-                            role="button"
-                            data-mdb-toggle="dropdown"
-                            aria-expanded="false"
-                    >
-                        <img
-                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp"
-                                class="rounded-circle"
-                                height="22"
-                                alt="Avatar"
-                                loading="lazy"
-                        />
-                    </a>
-                    <ul
-                            class="dropdown-menu dropdown-menu-end"
-                            aria-labelledby="navbarDropdownMenuLink"
-                    >
-                        <li>
-                            <a class="dropdown-item" href="#">My profile</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Settings</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Logout</a>
-                        </li>
-                    </ul>
+                <li><a href="#"><i class="fa fa-fw fa-user-plus"></i> Staff <i
+                        class="fa fa-fw fa-angle-left pull-right"></i></a></li>
+                <li><a href="#"><i class="fa fa-fw fa-paper-plane-o"></i> Pool Management</a>
                 </li>
+                <li><a href="#"><i class="fa fa-fw fa fa-question-circle"></i> Outsource</a></li>
+                <li><a href="#"><i class="fa fa-fw fa fa-question-circle"></i> Outsource</a></li>
+                <li><a href="#"><i class="fa fa-fw fa fa-question-circle"></i> Outsource</a></li>
+                <li><a href="#"><i class="fa fa-fw fa fa-question-circle"></i> Outsource</a></li>
             </ul>
         </div>
-        <!-- Container wrapper -->
+        <!-- /.navbar-collapse -->
     </nav>
-    <!-- Navbar -->
-</header>
-<!--Main Navigation-->
 
-<!--Main layout-->
-<main style="margin-top: 58px;">
-    <div class="container pt-4"></div>
-</main>
-<!--Main layout-->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <!-- Page Heading -->
+            <div class="row" id="main">
+                <div class="col-sm-12 col-md-12 well" id="content">
+                    <h1>Welcome Admin!</h1>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /#page-wrapper -->
+</div><!-- /#wrapper -->
+<style>
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+    @media (min-width: 768px) {
+        body {
+            margin-top: 50px;
+        }
+
+        /*html, body, #wrapper, #page-wrapper {height: 100%; overflow: hidden;}*/
+    }
+
+    #wrapper {
+        padding-left: 0;
+    }
+
+    #page-wrapper {
+        width: 100%;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    @media (min-width: 768px) {
+        #wrapper {
+            padding-left: 225px;
+        }
+
+        #page-wrapper {
+            padding: 22px 10px;
+        }
+    }
+
+    /* Top Navigation */
+
+    .top-nav {
+        padding: 0 15px;
+    }
+
+    .top-nav > li {
+        display: inline-block;
+        float: left;
+    }
+
+    .top-nav > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 20px;
+        color: #fff;
+    }
+
+    .top-nav > li > a:hover,
+    .top-nav > li > a:focus,
+    .top-nav > .open > a,
+    .top-nav > .open > a:hover,
+    .top-nav > .open > a:focus {
+        color: #fff;
+        background-color: #1a242f;
+    }
+
+    .top-nav > .open > .dropdown-menu {
+        float: left;
+        position: absolute;
+        margin-top: 0;
+        /*border: 1px solid rgba(0,0,0,.15);*/
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    }
+
+    .top-nav > .open > .dropdown-menu > li > a {
+        white-space: normal;
+    }
+
+    /* Side Navigation */
+
+    @media (min-width: 768px) {
+        .side-nav {
+            position: fixed;
+            top: 60px;
+            left: 225px;
+            width: 225px;
+            margin-left: -225px;
+            border: none;
+            border-radius: 0;
+            border-top: 1px rgba(0, 0, 0, .5) solid;
+            overflow-y: auto;
+            background-color: #222;
+            /*background-color: #5A6B7D;*/
+            bottom: 0;
+            overflow-x: hidden;
+            padding-bottom: 40px;
+        }
+
+        .side-nav > li > a {
+            width: 225px;
+            border-bottom: 1px rgba(0, 0, 0, .3) solid;
+        }
+
+        .side-nav li a:hover,
+        .side-nav li a:focus {
+            outline: none;
+            background-color: #1a242f !important;
+        }
+    }
+
+    .side-nav > li > ul {
+        padding: 0;
+        border-bottom: 1px rgba(0, 0, 0, .3) solid;
+    }
+
+    .side-nav > li > ul > li > a {
+        display: block;
+        padding: 10px 15px 10px 38px;
+        text-decoration: none;
+        /*color: #999;*/
+        color: #fff;
+    }
+
+    .side-nav > li > ul > li > a:hover {
+        color: #fff;
+    }
+
+    .navbar .nav > li > a > .label {
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        position: absolute;
+        top: 14px;
+        right: 6px;
+        font-size: 10px;
+        font-weight: normal;
+        min-width: 15px;
+        min-height: 15px;
+        line-height: 1.0em;
+        text-align: center;
+        padding: 2px;
+    }
+
+    .navbar .nav > li > a:hover > .label {
+        top: 10px;
+    }
+
+    .navbar-brand {
+        padding: 5px 15px;
+    }
+</style>
 </body>
-<script>
-</script>
+
 </html>
