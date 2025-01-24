@@ -1,0 +1,47 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+  background: url(../../dist/img/login-bg.jpg);
+  text-align: center;
+}
+
+.form-signin {
+  max-width: 410px;
+  padding: 40px;
+  margin: 0 auto;
+  background: #e9eaec;
+  border-radius: 0 0 10px 10px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+margin-bottom: 10px;}
+.form-signin-heading {text-align:center; background:#0b67b2; display:inline-block; color: #fff; width:36%; margin-bottom:0; padding:35px 0; border-radius:10px 10px 0 0;}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-control {background: #e9eaec;}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px;
+  font-size: 13px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-signin input {margin-bottom:40px; border-radius:5px;}
+.forget-password {margin-bottom:15px; margin-top:10px;}
+.login-error {color: tomato;margin-bottom: 20px; margin-top: -25px; }
+.forget-password a{text-decoration:none;}
